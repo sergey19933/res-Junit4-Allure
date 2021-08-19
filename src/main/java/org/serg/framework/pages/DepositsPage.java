@@ -76,6 +76,7 @@ public class DepositsPage extends BasePage {
 
     @Step("Выбираем чекбокс '{nameField}' значением '{onOff}'")
     public DepositsPage clickCheckboxPage(String nameField, String onOff) {
+        actions.pause(1000).build().perform();
         pageManager.getMethodsUtilsPage().choiceChekBox(nameField, onOff);
         actions.pause(1000).build().perform();
         return this;
